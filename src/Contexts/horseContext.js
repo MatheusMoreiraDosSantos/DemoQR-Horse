@@ -3,12 +3,7 @@ import React, { createContext, useState } from "react";
 export const HorseContext = createContext();
 
 const HorseProvider = ({ children }) => {
-  const [horses, setHorses] = useState([
-    { id: 1, title: "teste1", done: false },
-    { id: 2, title: "teste2", done: false },
-    { id: 3, title: "teste3", done: false },
-    { id: 4, title: "teste4", done: false },
-  ]);
+  const [horses, setHorses] = useState([]);
 
   const saveHorse = (todo) => {
     const newHorse = {

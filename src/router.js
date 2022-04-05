@@ -9,7 +9,6 @@ import Viewer from "./Views/Viewer";
 import Edit from "./Views/Edit";
 import Campaign from "./Views/Campaign";
 import Pedigree from "./Views/Pedigree";
-import PrivateRoute from "./PrivateRouter";
 
 export default function Router() {
   return (
@@ -18,11 +17,11 @@ export default function Router() {
         <Route path="/" exact component={Login} />
         <Route path="/Register" exact component={Register} />
         <Route path="/Viewer/:idHorse" exact component={Viewer} />
-        <PrivateRoute path="/Home" exact component={Home} />
-        <PrivateRoute path="/Account" exact component={Account} />
-        <PrivateRoute path="/Edit/:idHorse" exact component={Edit} />
-        <PrivateRoute path="/Campaign/:idHorse" exact component={Campaign} />
-        <PrivateRoute path="/Pedigree/:idHorse" exact component={Pedigree} />
+        <Route path="/Home" exact component={Home} />
+        <Route path="/Account" exact component={Account} />
+        <Route path="/Edit/:idHorse" exact component={Edit} />
+        <Route path="/Campaign/:idHorse" exact component={Campaign} />
+        <Route path="/Pedigree/:idHorse" exact component={Pedigree} />
       </Switch>
     </BrowserRouter>
   );
